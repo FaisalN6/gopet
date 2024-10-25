@@ -123,31 +123,6 @@ exports.connDB = (req, res) => {
                 }
             }
         });
-    // } else if (req.method === 'PATCH') {
-    //     const kd_barang = req.params.kd_barang;
-    //     const { jumlah } = req.body;
-    //     const query = 'UPDATE barang SET stok_barang = stok_barang - ? WHERE kd_barang = ?';
-    //     dbConnection.query(query, [jumlah, kd_barang], (err, result) => {
-    //         if (err) {
-    //             res.status(500).json({
-    //                 status: 'error',
-    //                 message: 'Terjadi kesalahan saat mengurangi stok barang',
-    //                 error: err
-    //             });
-    //         } else {
-    //             if (result.affectedRows > 0) {
-    //                 res.status(200).json({
-    //                     status: 'success',
-    //                     message: 'Stok barang berhasil dikurangi'
-    //                 });
-    //             } else {
-    //                 res.status(404).json({
-    //                     status: 'error',
-    //                     message: 'Data barang tidak ditemukan'
-    //                 });
-    //             }
-    //         }
-    //     });
     } else {
         res.status(405).json({
             status: 'error',
